@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+:root { font-size: 62.5%; }
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+
+body {
+
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+
+  margin: 0; padding: 0;
+  width: 100%; min-height: 100vh;
+
+  background: lightgrey;
+
+  font: 400 normal 1.6rem/1.2 'Fira Code', monospace;
+  font-variant-ligatures: common-ligatures;
+
+}
+
+
+
+.wrapper {
+
+  border: 1px solid black;
+  box-shadow: -1rem 1rem 0 0 rgba(0,0,0,0.2);
+  background: white;
+
+  z-index: 2;
+
+}
+
+
+.topbar {
+
+  display: flex;
+  align-items: center; justify-content: flex-end;
+
+  padding: .6rem;
+
+  border-bottom: 1px solid black;
+  background: grey;
+
+}
+
+
+
+.topbar > .bar-button {
+
+  display: flex;
+  align-items: center; justify-content: center;
+
+  margin-left: .6rem;
+  width: 1.2rem; height: 1.2rem;
+
+  border: 1px solid darkgrey;
+  background: lightgrey;
+
+  color: black;
+  cursor: default;
+
+}
+
+
+.bar-button.close:hover {
+
+  border: 1px solid darkred;
+  background: red;
+
+  color: white;
+
+}
+
+
+.bar-button.minimize:hover {
+
+  border: 1px solid darkorange;
+  background: orange;
+
+  color: black;
+
+}
+
+
+
+.wrapper h1 {
+
+  margin: 0; padding: 1.2rem;
+
+  border-bottom: 1px solid black;
+
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+
+}
+
+
+
+.wrapper p,
+.wrapper form,
+.wrapper form * { margin: 0; padding: 1.2rem; }
+
+.wrapper form { padding-top: 0; }
+
+
+
+.wrapper input,
+.wrapper button {
+
+  border: 1px solid black;
+  background: lightgrey;
+
+}
+
+
+.wrapper button:hover,
+.wrapper button:focus { background: darkgrey; }
+
+
+
+.desktop-icon {
+
+  position: absolute;
+  left: 4.8rem;
+
+  width: 64px; height: 64px;
+
+  font-size: 12px;
+  text-align: center;
+  color: black;
+
+  z-index: 1;
+
+}
+
+.desktop-icon:nth-child(1) { top: 4.8rem; }
+.desktop-icon:nth-child(2) { top: 19.2rem; }
+
+
+.desktop-icon img { width: 64px; height: 64px; margin-left: -6px; }
+.desktop-icon p { margin: 0; padding: 0; }
+
+
+a { text-decoration: none; }
